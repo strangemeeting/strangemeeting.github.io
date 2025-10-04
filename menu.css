@@ -1,47 +1,63 @@
-.navbar {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+.site-nav {
+  --bg: #000000;
+  --accent: #9d2b45;
+  background: var(--bg);
+  box-shadow: 0 2px 12px rgba(2,6,23,0.4);
 }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.site-nav .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.navbar li {
-    float: left;
+.site-nav .brand-logo {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
 }
 
-.navbar a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.site-nav .brand-text {
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
 }
 
-.navbar a:hover {
-    background-color: #111;
-
+.site-nav .nav-link {
+  color: rgba(255,255,255,0.9) !important;
+  padding: 0.6rem 1rem;
 }
 
+.site-nav .nav-link:hover {
+  color: #fff !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+}
+
+/* utility for anchored sections spacing */
+:target::before {
+  content: "";
+  display: block;
+  height: 72px;
+  margin-top: -72px;
+}
 
 .video-responsive {
- overflow:hidden;
- padding-bottom:56.25%; 
- position:relative;
- height:0;
-}
-.video-responsive iframe {
- left:0;
- top:0;
- height:100%;
- width:100%;
- position:absolute;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 }
 
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .site-nav .brand-text {
+    display: none;
+  }
+}

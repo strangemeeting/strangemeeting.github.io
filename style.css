@@ -1,105 +1,143 @@
-/* Suppression des marges et des bords pour html et body */
+:root {
+  --bg: #0e141b; /* bleu nuit profond : élégant, légèrement bleuté */
+  --card: #0f1724;
+  --muted: #9aa4b2;
+  --accent: #9d2b45;
+  --accent-2: #761530;
+  --surface: #0f1724;
+  --text: #e6eef6;
+}
+
+* { box-sizing: border-box; }
+
 html,
 body {
-    padding: 0;
-    margin: 0;
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--text);
+  background: var(--bg); /* fond uni, sans dégradé */
 }
-/* Définition d'un container pour gérer l'affichage */
+
 .container {
-    overflow: hidden;
-    /* Cache les éléments qui dépassent du container */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
 }
-/* Définition du carousel */
-.carousel {
-    position: relative;
-    /* Le carousel est positionné relativement à son parent */
+
+.section {
+  padding: 4rem 0;
 }
-/* Définition de l'élément contenant les diapositives */
-.carousel-inner {
-    display: flex;
-    /* Affiche les éléments en ligne */
-    overflow: hidden;
-    /* Cache les éléments qui dépassent */
-    height: 100vh;
-    /* Hauteur égale à 100% de la hauteur de la vue */
-    flex-wrap: nowrap;
-    /* Empêche les éléments de se placer sur plusieurs lignes */
+
+.section.bg-light {
+  background: #f7f9fc;
+  color: #0b1220;
 }
-/* Définition des diapositives */
-.slide {
-    flex: 0 0 100%;
-    /* Largeur de chaque diapositive est de 100% */
-    height: 100%;
-    /* Hauteur de chaque diapositive est de 100% */
-    transition: .5s ease-in-out;
-    /* Ajout d'une animation douce pour la transition entre les diapositives */
+
+.hero {
+  padding-top: 110px;
 }
-/* Définition de l'affichage de l'image de chaque diapositive */
-.slide img {
-    width: 100%;
-    /* Largeur de l'image est de 100% */
-    height: 100%;
-    /* Hauteur de l'image est de 100% */
-    object-fit: cover;
-    /* Couvre tout l'espace disponible */
+
+.hero-title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.6rem;
+  margin: 0 0 0.5rem;
+  color: var(--text);
 }
-/* Définition des boutons de contrôle du carousel */
-.carousel-controls {
-    position: absolute;
-    /* Les boutons sont absolument positionnés */
-    z-index: 5;
-    /* Ils sont placés au-dessus des autres éléments */
-    left: 10%;
-    /* La distance à gauche est de 10% */
-    right: 10%;
-    /* La distance à droite est de 10% */
-    top: 50%;
-    /* La distance du haut est de 50% */
-    display: flex;
-    /* Affiche les boutons en ligne */
-    justify-content: space-between;
-    /* Espacement égal entre les boutons */
+
+.lead {
+  color: var(--muted);
+  font-size: 1.05rem;
 }
-/* Style des boutons de contrôle */
-.carousel-controls button {
-    padding: 10px;
-    /* Ajout de padding pour un meilleur contrôle */
-    background-color: aquamarine;
-    /* Arrière-plan en aquamarine */
+
+.hero-image {
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(2, 6, 23, 0.5);
 }
-/* Définition des points de contrôle */
-.carousel-dots {
-    position: absolute;
-    /* Les points sont absolument positionnés */
-    z-index: 5;
-    /* Ils sont placés au-dessus des autres éléments */
-    left: 50%;
-    /* La distance à gauche est de 50% */
-    right: 50%;
-    /* La distance à droite est de 50% */
-    bottom: 10%;
-    /*La distance du bas est de 10% */
-    display: flex;
-    /* Affiche les points en ligne */
-    justify-content: center;
-    /* Centrage des points */
+
+.muted {
+  color: var(--muted);
 }
-/* Style des points de contrôle */
-.carousel-dots .dot {
-    border-radius: 50%;
-    /* Les points sont en forme de cercle */
-    margin: 5px;
-    /* Ajout d'un margin pour un meilleur contrôle */
+
+.musician {
+  text-align: center;
+}
+
+.musician h3 {
+  margin-top: 0.6rem;
+  margin-bottom: 0.25rem;
+  color: var(--accent-2);
+}
+
+.portrait {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.3);
+}
+
+.portrait {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.portrait:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 20px 60px 0 rgba(157, 43, 69, 0.25), 0 4px 16px rgba(2, 6, 23, 0.18);
+    outline: 3px solid var(--accent);
+    outline-offset: 6px;
     cursor: pointer;
-    /* Curseur en forme de main pour un meilleur contrôle */
 }
-/* Styles pour les points de navigation du carrousel */
-.carousel-dots .active {
-    /* Border de 10px pour le point actif */
-    border: 10px solid #761530 !important;
-    /* !important permet de surcharger les autres styles éventuels */
+
+.tech-list {
+  padding: 15px;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
-.carousel-dots .inactive {
-    /* Border de 10px pour les points inactifs */
-    border: 10px solid #2596be;
+
+
+.contact-form .form-control {
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.contact-form label {
+  color: var(--muted);
+}
+
+.contact-form .btn {
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+}
+
+.site-footer {
+  background: transparent;
+  color: var(--muted);
+}
+
+/* Responsive rules */
+@media (max-width: 992px) {
+  .portrait {
+    width: 160px;
+    height: 160px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 90px;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .container {
+    padding: 1rem;
+  }
 }

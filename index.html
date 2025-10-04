@@ -1,308 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- QUESTIONS
- - Mettre l'image Nom.jpg à la place du nom Strange meeting dans le menu à gauche ?
- - Photos portraits plus peties + marge de chaque coté dfe la page
- Caroussel : photo ..
- - Arriver sur le nom de la section en cliquant sur le menu (et pas en dessous du titre)
- - Police menu et page
- - Couleurs fond, police ...
- - taille police adresse mail
--  Marge sur les cotés
- 
- - Responsive
- - lien vers pdf
- - insérer un lien vers la vidéo
- 
- 
+<!-- QUESTIONS / TO DO -->
 
+<!DOCTYPE html>
+<html lang="fr">
 
-	<head>
-        <!-- Déclaration du type de document HTML -->
-		<meta charset="UTF-8">
-		<!-- Déclaration de la compatibilité pour les différents navigateurs -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Déclaration de la largeur de la vue pour les différents dispositifs -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Titre de la page -->
-		<title>Strange Meeting</title>
-        <!-- Lien vers le fichier CSS pour la mise en forme -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        
-		<!-- Lien vers le fichier CSS pour la mise en forme du carroussel -->
-		<link rel="stylesheet" href="slider.css">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Strange Meeting</title>
 
-		<!-- Lien vers le fichier CSS pour la mise en forme de la barre de navigation -->
-		<link rel="stylesheet" href="menu.css">
-		
-		<!-- Devicon: Programming languages icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-		
-		<!-- Couleur du fond et du texte de la page -->
-		<style type="text/css">
-			body {
-			color: purple;
-			background-color: #1fe0 }
-		</style>
-  
-    </head>
+	<!-- Fonts & icons -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-    <body>
-	
-		<!-- Barre de navugation -->
-		<nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
-            <div class="container-fluid">
-                <div class="mx-4">
-                    <a class="navbar-brand" href="#">Strange Meeting</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Qui">Qui sommes-nous ?</a>
-                        </li>
-						<li class="nav-item">
-                            <a class="nav-link" href="#Photos">Photos</a>
-                        </li>
-						<li class="nav-item">
-                            <a class="nav-link" href="#Video">Vidéo</a>
-                        </li>
-						<li class="nav-item">
-                            <a class="nav-link" href="#FichTec">Fiche technique</a>
-                        </li>
-						<li class="nav-item">
-                            <a class="nav-link" href="#Contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+	<!-- Bootstrap (kept for layout utilities) -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-cuJ6mZ6pWc2QvZz+6QKqj3HkKpA7x2bO3T1Xy4Qwz2V6kR2uU6z8gW6f" crossorigin="anonymous">
 
-<!-- Rubrique Accueil -->
+	<!-- Project styles -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="slider.css">
+	<link rel="stylesheet" href="menu.css">
+</head>
 
-        <div class="container my-4 ">
-			<div class="row justify-content-center">
-				<img src="images/Image_0.jpg" class="img-fluid" alt="" height="540" width="540" srcset="">
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark site-nav fixed-top">
+		<div class="container">
+			<a class="navbar-brand d-flex align-items-center" href="#Accueil">
+				<img src="images/Nom.jpg" alt="Strange Meeting" class="brand-logo" />
+				<!-- <span class="brand-text">Strange Meeting</span> -->
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mainNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="#Accueil">Accueil</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Qui">Qui sommes-nous</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Photos">Photos</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Fiche">Fiche technique</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+				</ul>
 			</div>
-
-			<div class="row justify-content-center">
-				<img src="images/Nom.jpg" class="img-fluid" alt=""  height="40" width="40"   srcset="">
-			</div>
-			
-			<div class="row justify-content-center">
-				<p>Strange Meeting, fruit de l’heureuse rencontre de quatre musiciens de la région grenobloise, vous embarque dans un voyage mélodique et improvisé… 
-				Une batteuse, un flûtiste, une pianiste, un bassiste et le plaisir de partager un jazz métissé aux influences nomades loin des standards…
-Au travers de jeux d’improvisation, notre quartet se réapproprie des musiques récoltées aux 4 coins du monde : thèmes traditionnels ou compositions de jazz(wo)men, souvent contemporains, qui nous inspirent.
-				</p>
-			</div>
-						
-            <div class="row justify-content-center">
-                <div class="col-lg mb-lg-4">
-                    <img src="images/Image_0.jpg" class="img-fluid" alt="" srcset="">
-                </div>
-				<div class="col-lg mx-2 align-self-center">
-					<div class="my-3">
-						<img src="images/Nom.jpg" class="img-fluid" alt="" srcset="">
-						<h1 class="text-center">Strange Meeting</h1>
-						<h2 class="text-center">Jazz nomade</h2>
-						<p>Strange Meeting, fruit de l’heureuse rencontre de quatre musiciens de la région grenobloise, vous embarque dans un voyage mélodique et improvisé… 
-				Une batteuse, un flûtiste, une pianiste, un bassiste et le plaisir de partager un jazz métissé aux influences nomades loin des standards…
-Au travers de jeux d’improvisation, notre quartet se réapproprie des musiques récoltées aux 4 coins du monde : thèmes traditionnels ou compositions de jazz(wo)men, souvent contemporains, qui nous inspirent.
-				</p>
-					</div>
-				</div>
-			</div> 
-		</div>	
-
-
-<!-- Rubrique Qui sommes-nous ? -->
-
-		<div class="my-4">
-			<div class="text-center mb-4">
-				<h1 id="Qui">Qui sommes-nous ?</h1>
-			</div>
-		</div>	
-		<div class="row justify-content-center">
-            <div class="col-lg mb-lg-4">
-				<img src="images/Musiciens/Nathalie.jpg" class="img-fluid" alt="" srcset="">
-            </div>
-            <div class="col-lg mx-2 align-self-center">
-              	<div class="my-3">
-                  	<h1 class="text-center">Nathalie</h1>
-					<p>Nath aux claviers ... presentation ...
-                   	</p>
-	          	</div>
-            </div>
-        </div>
-
-		<div class="row justify-content-center">
-            <div class="col-lg mx-2 align-self-center">
-              	<div class="my-3">
-					<h1 class="text-center">Justine</h1>
-					<p>Présentation de Juju la batteuse ...
-					</p>
-	           	</div>
-            </div>
-			<div class="col-lg mb-lg-4">
-               	<img src="images/Musiciens/Justine.jpg" class="img-fluid" alt="" srcset="">
-            </div>
-        </div>
-
-		<div class="row justify-content-center">
-            <div class="col-lg mb-lg-4">
-				<img src="images/Musiciens/Yann.jpg" class="img-fluid" alt="" srcset="">
-            </div>
-            <div class="col-lg mx-2 align-self-center">
-              	<div class="my-3">
-                  	<h1 class="text-center">Yann</h1>
-					<p>Mister Yann ... presentation ...
-                   	</p>
-	          	</div>
-            </div>
-        </div>
-
-		<div class="row justify-content-center">
-            <div class="col-lg mx-2 align-self-center">
-              	<div class="my-3">
-					<h1 class="text-center">François</h1>
-					<p>François big Papa .. presentation ...
-					</p>
-	           	</div>
-            </div>
-			<div class="col-lg mb-lg-4">
-               	<img src="images/Musiciens/Francois.jpg" class="img-fluid" alt="" srcset="">
-            </div>
-        </div>	
-
-
-<!-- Rubrique Carrousel Photos -->
-
-		<div class="my-4">
-			<div class="text-center mb-4">
-				<h1 id="Photos">Photos</h1>
-			</div>
-		</div>	
-
-<!-- Conteneur principal pour le carrousel -->
-
-		<div id="slider">
-			<img src="images/Carrousel/Carrousel 1.jpg" alt="Photo 1" class="img-fluid" id="slide">
-			<div id="precedent" onclick="ChangeSlide(-1)"><</div>
-			<div id="suivant" onclick="ChangeSlide(1)">></div>
 		</div>
+	</nav>
 
-		
- <!-- Javascript pour passer les photos -->
+	<main class="site-main">
 
-	<script>
-		const slide = ["images/Carrousel/Carrousel 1.jpg", "images/Carrousel/Carrousel 2.jpg", "images/Carrousel/Carrousel 3.jpg", "images/Carrousel/Carrousel 4.jpg"];
-		let numero = 0;
-
-		function ChangeSlide(sens) {
-			numero = numero + sens;
-			if (numero < 0)
-				numero = slide.length - 1;
-			if (numero > slide.length - 1)
-				numero = 0;
-		document.getElementById("slide").src = slide[numero];
-		}
- 	</script>
-	
-<!-- Rubrique Carrousel Vidéo -->
-
-		<div class="my-4">
-			<div class="text-center mb-4">
-				<h1 id="Video">En live ...</h1>
-				<div class="video-responsive"> 
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/kg3ZN65Tg2c?si=9p4XQjXnxYB81mW_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<!-- Accueil -->
+		<section id="Accueil" class="section hero">
+			<div class="container">
+				<div class="hero-inner row align-items-center">
+					<div class="col-lg-6 text-center text-lg-start">
+						<h1 class="hero-title">Strange Meeting</h1>
+						<p class="lead">Un quartet grenoblois. Jazz métissé, improvisation, voyages sonores.</p>
+						<p><a class="btn btn-primary btn-lg" href="#Contact">Nous contacter</a></p>
+					</div>
+					<div class="col-lg-6 text-center mt-4 mt-lg-0">
+						<img src="images/Image_0.jpg" alt="Strange Meeting" class="img-fluid hero-image" />
+					</div>
 				</div>
 			</div>
-		</div>	
-		
-		<!-- Mettre une vidéo ??? -->
+		</section>
 
+		<!-- Qui sommes-nous -->
+		<section id="Qui" class="section">
+			<div class="container">
+				<div class="text-center mb-4">
+					<h2>Qui sommes-nous ?</h2>
+					<p class="muted">Quatre musiciens, des influences nomades et l'amour de l'improvisation.</p>
+				</div>
 
-<!-- Rubrique Fiche technique -->
+				<div class="row gy-4 align-items-center">
+					<div class="col-md-6 musician">
+						<img src="images/Musiciens/Nathalie.jpg" alt="Nathalie" class="portrait img-fluid">
+						<h3>Nathalie</h3>
+						<p>Claviers, textures & compositions.</p>
+					</div>
+					<div class="col-md-6 musician">
+						<img src="images/Musiciens/Justine.jpg" alt="Justine" class="portrait img-fluid">
+						<h3>Justine</h3>
+						<p>Flûtes et improvisations mélodiques.</p>
+					</div>
+					<div class="col-md-6 musician">
+						<img src="images/Musiciens/Yann.jpg" alt="Yann" class="portrait img-fluid">
+						<h3>Yann</h3>
+						<p>Basse & groove.</p>
+					</div>
+					<div class="col-md-6 musician">
+						<img src="images/Musiciens/Francois.jpg" alt="François" class="portrait img-fluid">
+						<h3>François</h3>
+						<p>Batterie & percussions.</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-		<div class="my-4">
-			<div class="text-center mb-4">
-				<h1 id="FichTec">La fiche technique du groupe</h1>
-				<p> Ici on met une fiche technique à télécharger en pdf ...ça fait pro </p>
-				<p> Rajouter qu'on aime jouer à domicile ?</p>
+		<!-- Photos / Carrousel -->
+		<section id="Photos" class="section bg-light">
+			<div class="container text-center">
+				<h2 class="mb-4">Photos</h2>
+				<div id="slider" class="mx-auto">
+					<button id="prev" class="arrow">‹</button>
+					<div class="slide-wrap">
+						<img src="images/Carrousel/Carrousel 1.jpg" class="slide-img" alt="photo 1">
+					</div>
+					<button id="next" class="arrow">›</button>
+				</div>
+				<p class="small muted mt-2">Utilisez les flèches ou balayez sur mobile</p>
+			</div>
+		</section>
+
+		<!-- Fiche technique -->
+		<section id="Fiche" class="section">
+			<div class="container">
+				<div class="text-center mb-4">
+					<h2>Fiche technique</h2>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<ul class="tech-list">
+							<li>Batterie - Clavier - Basse - Flûtes</li>
+							<li>Espace scénique utile : ~9m²</li>
+							<li>Durée du set modulable, jusqu'à 1h30</li>
+							<li>Le groupe est autonome pour la sonorisation (pour une jauge jusqu'à 100 personnes)</li>
+						</ul>
+					</div>
+				<div style="text-align:center; margin-top:20px;">
+					<a href="fiche-technique.pdf" download 
+					style="display:inline-block; padding:10px 20px; background-color:#007bff; color:white; text-decoration:none; border-radius:5px;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+							<path d="M8 5a.5.5 0 0 1 .5.5v4.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 10.293V5.5A.5.5 0 0 1 8 5z"/>
+							<path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3-.5a.5.5 0 0 1-.5-.5V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5h-3.5A1.5 1.5 0 0 1 11 4z"/>
+						</svg> Télécharger la fiche PDF
 					
-			</div>
-		</div>	
-
-
-		<div class="row justify-content-center">
-			<p> <br /> </p>
-			<p>Batterie - Clavier - Basse - Flûtes </p>
-			<p>Espace scénique utile : ~9m²</p>
-			<p>Durée du set modulable, jusqu'à 1h30</p>
-			<p>Le groupe est autonome pour la sonorisation</p>
-			<p>(pour une jauge jusqu'à 100 personnes)</p>
-			</div>
-		
-		<!-- Mettre la FT -->
-				
-	
-<!-- Rubrique Contact -->
-
-
-		<div class="my-4">
-			<div class="text-center mb-4">
-				<h1 id="Contact">Pour nous contacter ?</h1>
-			</div>
-		</div>	
-		
-		<div class="row justify-content-center">
-                <div class="col-lg mb-lg-4">
-                    <img src="images/Photo Contact.jpg" class="img-fluid" alt="" srcset="">
-                </div>
-				<div class="col-lg mx-2 align-self-center">
-					<div class="my-3">
-						<h3 class="text-center">Strange Meeting</h3>
-						<a href="mailto:jim@example.com">strangemeeting@gmail.com</a>
-						<p> <br /> </p>
-						<h5 class="text-center">06 60 64 89 38 (François)</h5>
-					</div>
-					<div class="row ">
-						<div class="col">
-							<div class="text-center">
-								<h4>Facebook</h4>
-								<p> Logo et lien Facebook</p>
-							</div>
-						</div>
-						<div class="col">
-							<div class="text-center">
-								<h4>Insta</h4>
-								<p> Logo et lien Insta</p>
-							</div>
-						</div>
-						<div class="col">
-							<div class="text-center">
-								<h4>Youtube</h4>
-								<p> Logo et lien YT</p>
-								<p> https://www.youtube.com/channel/UC1fdUW3vBs8vbZeF0xlwtEg </p>
-							</div>
-						</div>
-					</div>
+				</a>
 				</div>
-         </div>   
+				</div>
+			</div>
+		</section>
+
+	
 
 
-
+		<!-- Contact -->
 		
-        <!-- JavaScript: Above <body>  -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-            crossorigin="anonymous"></script>
-    </body>
+<!-- Contact -->
+<section class="container my-5">
+    <h1 id="Contact" class="text-center mb-4">Contact</h1>
+
+    <div class="row align-items-center justify-content-center">
+        <!-- Photo -->
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+            <img src="images/Photo Contact.jpg" class="img-fluid rounded shadow" alt="Photo du groupe">
+        </div>
+
+        <!-- Coordonnées -->
+        <div class="col-lg-6 text-center">
+            <h3 class="fw-bold">Strange Meeting</h3>
+            <p class="mb-1">
+                <a href="mailto:strangemeeting@gmail.com" class="fs-5 text-decoration-none">
+                    strangemeeting@gmail.com
+                </a>
+            </p>
+            <p class="fw-semibold">+33 6 60 64 89 38 (François)</p>
+
+            <!-- Réseaux sociaux -->
+            <div class="d-flex justify-content-center gap-4 mt-3">
+                <a href="https://www.facebook.com/music.strangemeeting/" target="_blank" class="text-decoration-none">
+                    <img src="images/icons/facebook.svg" alt="Facebook" width="32"> Facebook
+                </a>
+                <a href="https://www.instagram.com/strange_meeting_/" target="_blank" class="text-decoration-none">
+                    <img src="images/icons/instagram.svg" alt="Instagram" width="32"> Instagram
+                </a>
+                <a href="https://www.youtube.com/channel/UC1fdUW3vBs8vbZeF0xlwtEg" target="_blank" class="text-decoration-none">
+                    <img src="images/icons/youtube.svg" alt="YouTube" width="32"> YouTube
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+	</main>
+
+	<footer class="site-footer text-center py-4">
+		<div class="container">
+			<small>© Strange Meeting — Tous droits réservés</small>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<script>
+		// Smooth scroll: headings get correct offset from fixed navbar
+		document.querySelectorAll('a.nav-link').forEach(a=>{
+			a.addEventListener('click', function(e){
+				const target = document.querySelector(this.getAttribute('href'));
+				if(target){
+					e.preventDefault();
+					const y = target.getBoundingClientRect().top + window.scrollY - document.querySelector('.site-nav').offsetHeight - 10;
+					window.scrollTo({top: y, behavior: 'smooth'});
+				}
+			});
+		});
+
+		// Simple slider (rotates images from folder)
+		(function(){
+			const images = [
+				'images/Carrousel/Carrousel 1.jpg',
+				'images/Carrousel/Carrousel 2.jpg',
+				'images/Carrousel/Carrousel 3.jpg',
+				'images/Carrousel/Carrousel 4.jpg'
+			];
+			let idx = 0;
+			const img = document.querySelector('#slider .slide-img');
+			const prev = document.getElementById('prev');
+			const next = document.getElementById('next');
+			function show(n){ idx = (n + images.length) % images.length; img.src = images[idx]; }
+			prev?.addEventListener('click', ()=> show(idx-1));
+			next?.addEventListener('click', ()=> show(idx+1));
+			// auto-advance
+			setInterval(()=> show(idx+1), 5000);
+		})();
+	</script>
+
+</body>
 
 </html>
