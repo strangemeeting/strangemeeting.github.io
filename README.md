@@ -1,2 +1,5 @@
 # strangemeeting.github.io
-test
+todo
+
+- replier menu quand clic
+- integrer video youtube
