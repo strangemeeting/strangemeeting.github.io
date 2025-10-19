@@ -1,5 +1,5 @@
 :root {
-  --bg: #0e141b; /* bleu nuit profond : élégant, légèrement bleuté */
+  --bg: #0e141b; /* bleu nuit */
   --card: #0f1724;
   --muted: #9aa4b2;
   --accent: #9d2b45;
@@ -46,7 +46,7 @@ body {
 }
 
 .lead {
-  color: var(--muted);
+  /* color: var(--muted); */
   font-size: 1.05rem;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .muted {
-  color: var(--muted);
+  /* color: var(--muted); */
 }
 
 .musician {
@@ -66,7 +66,7 @@ body {
 .musician h3 {
   margin-top: 0.6rem;
   margin-bottom: 0.25rem;
-  color: var(--accent-2);
+  /* color: var(--accent-2); */
 }
 
 .portrait {
@@ -93,7 +93,7 @@ body {
 
 .tech-list {
   padding: 15px;
-  color: var(--muted);
+  /* color: var(--muted); */
   font-size: 1.05rem;
 }
 
