@@ -9,7 +9,7 @@
 .arrow:active{ transform:translateY(1px); }
 
 @media (max-width: 768px){
-  .slide-img{ height:280px; }
+  .slide-img{ height:auto; object-fit: contain;}
   .arrow{ font-size:1.8rem; }
 }
 
