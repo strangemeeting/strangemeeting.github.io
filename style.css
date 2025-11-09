@@ -118,13 +118,17 @@ body {
   background: transparent;
   color: var(--muted);
 }
+
+.video-wrapper {
+  max-width: 560px;      /* largeur max sur ordinateur */
+  margin: 0 auto;        /* centre horizontalement */
+}
+
 .video-responsive {
   position: relative;
-  padding-bottom: 56.25%; /* Ratio 16:9 */
+  padding-bottom: 56.25%; /* ratio 16:9 */
   height: 0;
   overflow: hidden;
-  max-width: 100%;
-  margin: 0 auto; /* Centre horizontalement */
 }
 
 .video-responsive iframe {
